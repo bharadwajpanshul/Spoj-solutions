@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    int t;int x,y;
+    cin >> t;
+    while (t--)
+    {
+        int ans;
+        cin >> x >> y;
+        if(x==y||x==y+2)
+        {
+        if(y%2==0)
+        {
+         ans=x+y;
+        }
+        else
+        {
+            ans=x+y-1;
+        }
+            cout<< ans <<endl;
+        }
+            else
+            {
+                cout<<"No Number \n";
+                
+            }
+        }
+return 0;
+}
