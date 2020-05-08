@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin >> t;int i;
+	while(t--)
+	{
+		int temp=0; int sum=0; int n;
+		cin >> n;
+		int m[n];int f[n];
+		for(i=0;i<n;i++) {
+		cin >> m[i];
+		}
+		for(i=0;i<n;i++) {
+		cin >> f[i];
+		}
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n-i-1;j++)
+			{
+				if(m[j]>m[j+1])
+				{
+				temp=m[j];
+				m[j]=m[j+1];
+				m[j+1]=temp;
+				}
+				
+			}
+			
+		}
+	
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n-i-1;j++)
+			{
+				if(f[j]>f[j+1])
+				{
+				temp=f[j];
+				f[j]=f[j+1];
+				f[j+1]=temp;
+				}
+				
+			}
+			
+		}
+	
+		for(int i=0;i<n;i++)
+		{
+		 sum = sum + m[i]*f[i];
+		}
+		cout <<sum<<endl;
+		
+		
+		
+	
+	}
+
+	return 0;
+}
